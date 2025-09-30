@@ -1,32 +1,34 @@
-### Overview
-# Home Automation System
-
-A lightweight home automation system built with **Zephyr RTOS** and **ESP32** microcontroller, providing MQTT-based communication for remote control of electrical appliances.
+# Connected Home
 
 ## Overview
 
 This project implements a smart home automation solution that allows users to control electrical appliances both remotely via MQTT messaging and manually through GPIO interrupts. The system is designed to be efficient, reliable, and compatible with modern IoT ecosystems.
+
+The firmware is based on the [Zephyr RTOS](https://www.zephyrproject.org) and Espressif ESP32 microcontroller. 
 
 ## Features
 
 - **MQTT Client**: Full support for MQTT v3.1.1 protocol
   - Send MQTT PUBLISH messages
   - Receive MQTT SUBSCRIBE messages
-  - Lightweight publish/subscribe messaging optimized for IoT devices
+  - GPIO to control appliances
 
 ## Getting Started
 
+Building the connected home firmware requires a proper Zephyr development environment. Follow the
+official [Zephyr Getting Started
+Guide](https://docs.zephyrproject.org/latest/getting_started/index.html) to establish one.
+
 ### Prerequisites
 
-- Zephyr SDK installed
 - MQTT broker (local or cloud-based)
 
 ### Installation
 
 #### 1. Clone the repository:
 ```bash
-git clone https://github.com/walidbadar/home-automation-system.git
-cd home-automation-system
+git clone https://github.com/walidbadar/connected-home.git
+cd connected-home
 ```
 
 #### 2. Build the firmware
@@ -58,7 +60,7 @@ make
 
 #### 2. Build and run
 ```bash
-cd home-automation-system
+cd connected-home
 west build -p auto -b native_sim .
 west build -t run
 ```
