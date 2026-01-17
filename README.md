@@ -1,17 +1,11 @@
-# Connected Home
+# Connected Home 🔌
 
 ## Overview
 
 This project implements a smart home automation solution that allows users to control electrical appliances both remotely via MQTT messaging and manually through GPIO interrupts. The system is designed to be efficient, reliable, and compatible with modern IoT ecosystems.
 
-The firmware is based on the [Zephyr RTOS](https://www.zephyrproject.org) and Espressif ESP32 microcontroller. 
-
-## Features
-
-- **MQTT Client**: Full support for MQTT v3.1.1 protocol
-  - Send MQTT PUBLISH messages
-  - Receive MQTT SUBSCRIBE messages
-  - GPIO to control appliances
+The firmware is based on the [Zephyr RTOS](https://www.zephyrproject.org) and can easily be ported to other boards
+that support Wi-Fi or Ethernet by providing a overlay.
 
 ## Getting Started
 
